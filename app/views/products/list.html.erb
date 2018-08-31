@@ -1,0 +1,22 @@
+<List of Inventory>
+
+<table>
+    <thead>
+        <tr>
+            <th> PID </th>
+            <th> Item </th>
+            <th> Category </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @products.each do |product| %>
+        <tr>
+            <td><%=product.pid%></td>
+            <td><%=product.item%></td>
+            <td><%=product.category%></td>
+            <td>
+            <%= link_to "View Details", "/products/#{product.id}" %>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

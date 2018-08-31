@@ -1,0 +1,30 @@
+<h1>Product Details</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Description </th>
+            <th> Price </th>
+            <th> Condition </th>
+            <th> Dimension_w </th>
+            <th> Dimension_l </th>
+            <th> Dimension_h </th>
+            <th> Img_file </th>
+            <th> Quantity </th>
+            <th> Category </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class=description><%=@product.description%></td>
+            <td><%=number_to_currency @product.price%></td>
+            <td><%=@product.condition%></td>
+            <td><%=@product.dimension_w%></td>
+            <td><%=@product.dimension_l%></td>
+            <td><%=@product.dimension_h%></td>
+            <td><%=image_tag @product.img_file+".jpg", size: 300%></td>
+            <td><%=@product.quantity%></td>
+            <td><%=@product.category%></td>
+        </tr>
+    </tbody>
+</table>
